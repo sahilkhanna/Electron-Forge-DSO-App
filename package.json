@@ -1,0 +1,64 @@
+{
+  "name": "dso-gui",
+  "productName": "dso-gui",
+  "version": "1.0.0",
+  "description": "A GUI desktop app for collecting and displaying data from a Digital Signal Oscilloscope.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "Sahil Khanna",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "dso_gui"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "dsogui"
+      }
+    }
+  },
+  "dependencies": {
+    "echarts": "^4.2.0-rc.1",
+    "electron-compile": "^6.4.3",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-forge": "^5.2.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "serialport": "^7.0.2",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-prebuilt-compile": "3.0.2",
+    "electron-rebuild": "^1.8.2"
+  }
+}
